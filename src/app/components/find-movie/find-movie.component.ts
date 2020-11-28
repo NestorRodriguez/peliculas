@@ -38,6 +38,7 @@ export class FindMovieComponent implements OnInit {
         loading.dismiss();  
         this.peliculas=data
         this.movieNotFound = true
+        console.log(data)
         if(this.peliculas.results.length == 0){
             let toast = await this.toastCtrl.create({
             message: 'No existen peliculas con ese nombre',
@@ -46,7 +47,7 @@ export class FindMovieComponent implements OnInit {
           });
           toast.present();
         }else {
-        if(this.peliculas.results.errorMessage != ""){
+        if(this.peliculas.results.errorMessage != "" && this.peliculas.results.length == 0 ){
           let toast = await this.toastCtrl.create({
             message: 'El servicio no esta disponible, intentelo más tarde',
             duration: 3000,
