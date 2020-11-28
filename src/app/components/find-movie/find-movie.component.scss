@@ -1,0 +1,37 @@
+#container {
+  top: 20%;
+}
+
+#container2 {
+  border-radius: 12px;
+  border-style: solid;
+  margin: 2% 6%;
+  border-color: #faedca;
+  margin: 2% 6%;
+}
+
+#container3 {
+  left: 0;
+  right: 0;
+
+  border-radius: 12px;
+  border-style: solid;
+  border-color: #fe5d26;
+  background: #faedca;
+  margin: 2% 6%;
+}
+
+#container ion-item {
+  --ion-background-color: #faedca;
+}
+
+#font {
+  font-size: 18px;
+}
+
+#content {
+  display: flexbox;
+}
+ion-thumbnail {
+  --size: 10%;
+}

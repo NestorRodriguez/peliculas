@@ -1,0 +1,32 @@
+<ion-card id="container2">
+  <ion-card-header>
+    <ion-card-title>
+      <form  (ngSubmit)="searchMovie(forma)" #forma="ngForm">
+        <ion-item>
+          <ion-label position="stacked">Digite el nombre de la pelicula</ion-label>
+          <ion-input maxLength="200" minLength="3" required ngModel #movie="ngModel" name="movie"></ion-input>
+        </ion-item>  
+
+        <ion-toolbar>
+          <ion-button type="submit" expand="block" shape="round" fill="outline">Buscar</ion-button>
+        </ion-toolbar>
+      </form>
+    </ion-card-title>
+  </ion-card-header>
+</ion-card>
+
+<div *ngIf="movieNotFound" id="container">
+<ion-list  id="container3" *ngFor="let movie of peliculas.results">
+  <ion-list-header lines="inset">
+    <ion-label id="font">{{movie.title}}</ion-label>
+  </ion-list-header>
+  <ion-item>
+    <ion-thumbnail slot="start">
+      <ion-img [src]="movie.image"></ion-img>
+    </ion-thumbnail>
+    <div id="content">
+      <p>{{movie.description}}</p>
+    </div>
+  </ion-item>
+</ion-list>
+</div>

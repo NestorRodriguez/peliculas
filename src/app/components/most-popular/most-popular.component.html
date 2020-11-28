@@ -1,0 +1,17 @@
+
+  <ion-list id="container" *ngFor="let movie of peliculas.items">
+    <ion-list-header lines="inset">
+      <ion-label id="font">{{movie.title}}</ion-label>
+      <ion-button fill="clear">{{movie.rank}}</ion-button>
+    </ion-list-header>
+    <ion-item>
+      <ion-thumbnail slot="start">
+        <ion-img [src]="movie.image"></ion-img>
+      </ion-thumbnail>
+      <div id="content">
+        <p>{{movie.crew}}</p>
+        <p>{{movie.year}}</p>
+      </div>
+    </ion-item>
+  </ion-list>
+
